@@ -116,7 +116,7 @@ function buildMoviesSection(list, categoryName) {
     const moviesCont = document.getElementById('movies-cont');
     const moviesListHTML = list.map(item => {
        if(item.backdrop_path!=null ||item.title!=null){
-        if(item.backdrop_path!=null&&item.title!=null){
+  
         return `<div>
         <a href="./detailtv.html" title = "${item.title||item.name}" onclick="getMovieDetailstv(${item.id})">
         <img class="movies-item" src = "${imgPath}${item.backdrop_path}" alt="${item.title||item.name}">
@@ -125,7 +125,7 @@ function buildMoviesSection(list, categoryName) {
         </a> 
         </div>
         `;}
-       }
+       
     } ).join('');
     const moviesSectionHTML = ` 
     <h2 class="movies-section-heading">${categoryName} <span class="explore-nudge">Explore All</span></h2>
